@@ -1,0 +1,630 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+*{
+margin:0;
+padding:0;
+}
+/* khung bao quanh du lieu */
+#wrapper {
+	margin:0 auto;
+    width: 960px;
+	height:auto;
+	position:relative;
+	
+	background-color:#00FF00;
+	border:1;;
+}
+
+#logo {
+    /*background: url("images/banner.jpg") no-repeat scroll left top transparent;*/
+	width:960px;
+    height: 200px;
+	background-color:#339966;
+	border:1;
+}
+/* doan nay danh cho menu*/
+#container {
+	font-family: Tahoma;
+	margin: 0px;
+
+	border: none;
+
+	float: left;
+
+	height: 39px;
+
+}
+
+#m-top{
+	position: relative; 
+	width: 100%;
+	 text-align: left;
+	 height: 39px;
+	 z-index:1110;
+	font-family: Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#container ul {
+	float: left;
+	list-style: none;
+	behavior: url(whateverhover.htc);
+	padding: 0px;
+	margin: 0px;
+}
+
+#container ul li span#left-m{
+	background: url(../image/left.gif) silver no-repeat;
+	width: 4px;
+	height: 39px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100000;
+}
+#container ul li span#right-m{
+	background: url(../image/right.gif) silver no-repeat;
+	width: 4px;
+	height: 39px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100000;
+}
+#container ul li span#mid-m{
+	background: url(../image/middle.gif) silver repeat-x;
+	height: 39px;
+	width: 160px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+#container ul li span#left-m2{
+	background: url(../image/left.gif) silver no-repeat;
+	width: 4px;
+	height: 39px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100000;
+}
+#container ul li span#right-m2{
+	background: url(../image/right.gif) silver no-repeat;
+	width: 4px;
+	height: 39px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 100000;
+}
+#container ul li span#mid-m2{
+	background: url(../image/middle.gif) silver repeat-x;
+	height: 39px;
+	width: 160px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+#container ul li {
+	position: relative;
+	float: left;
+	background:silver;
+	height: 34px;
+	width: 160px;text-align: center;
+	color: black;
+}
+#container ul li:hover span#mid-m{background: url(../image/2-middle.gif) silver repeat-x;}
+#container ul li:hover span#mid-m a{color:navy;}
+#container ul li:hover span#left-m{background: url(../image/2-left.gif) silver repeat-x;}
+#container ul li:hover span#right-m{background: url(../image/2-right.gif) silver repeat-x;}
+#container ul li:hover {
+	cursor: pointer;
+}#container li a {
+	font-family: Tahoma;
+	display: block;
+	color: #292929;
+	font-weight: bold;
+	text-decoration: none;
+	padding-top: 11px;
+}
+
+#container li ul{
+	position: absolute;
+	display: none;
+	width: 160px;
+	margin-top:39px;
+}
+
+#container li:hover ul{display: block;background: black;}
+
+#container ul li ul li {
+	border: none;
+	width: 100%;
+	padding-top: 5px;
+	background: silver;
+}
+#container ul li ul li:hover span#mid-m2{background: url(../image/2-middle.gif) silver repeat-x;}
+#container ul li ul li:hover span#mid-m2 a{color:navy;}
+#container ul li ul li:hover span#left-m2{background: url(../image/2-left.gif) silver repeat-x;}
+#container ul li ul li:hover span#right-m2{background: url(../image/2-right.gif) silver repeat-x;}
+
+
+#scrip {
+height: 40px;
+width:960px;
+background-color:#FFCC00;
+border:1;
+}
+.trai{
+width:150px;
+height:1000px;;
+background-color:#333;
+float :left;
+padding:5px;
+border:1;
+}
+/* Tìm kiếm ben trái */
+.title_box{
+width:150px;
+height:40px;
+margin: 1px 0 0;
+  
+background:#609aa5 url(search.gif) no-repeat scroll 0px 5px ;
+text-align:right;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+line-height:35px;
+}
+.title_box_menu{
+width:150px;
+height:35px;
+margin:1px 0 0 ;
+background:#609aa5  no-repeat scroll 0px 5px ;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+line-height:30px;
+}
+
+.cb{
+	clear:both;
+}
+
+.h_5 {
+    height: 7px;
+}
+.h_6 {
+    height: 4px;}
+.h_30{
+	height:40px;
+	padding-left:inherit;
+	height:30px; font-size:13px;
+}
+.a_1
+{ height:7px;
+background-color:#333;
+}
+.selectbox_left{
+width:140px; 
+height:20px; 
+font-size:12px; 
+font-weight:normal; 
+text-align:left; 
+border:1px solid #b0b0b0;
+}
+
+.border_box {
+	background:#066;
+	border:#999;
+	height:auto;
+	text-align:center;
+	width: 150px;
+}
+.border_boxdn {
+	background:#066;
+	border:#999;
+	height:auto;
+	text-align:center;
+	width: auto;
+}
+.border_box_admin {
+	background:#FFF;
+	border:#999;
+	height:auto;
+	text-align:center;
+	width: 150px;
+}
+
+ HỖ TRỢ TRƯC TUYẾN
+
+.support_tab {
+    background:  no-repeat scroll left center transparent;
+    border-bottom: 1px dotted #9F9F9F;
+    color: #FFFFFF;
+    display: block;
+    font-weight: bold;
+    height: 30px;
+    padding: 15px 0 0 50px;
+    width: 140px;
+}
+.border_hotrotructuyen {
+	background:#FFF;
+    border:#999 ;
+    height:150px;
+    text-align:center;
+    width: 150px;
+}
+
+
+
+/* THANH MENU SAN PHAM BEN TRAI */
+ul.left_menu{
+width:150px;
+padding:0px;
+margin:0px;
+list-style:none;
+}
+ul.left_menu li{
+margin:0px;
+list-style:none;
+}
+ul.left_menu li.odd a{
+width:150px;height:30px;display:block;background:url(../image/bullet2.gif) no-repeat left #dad0d0; background-position:7px 7px;border-bottom:1px #FFFFFF solid;
+text-align:center;font: "Times New Roman"; font-weight:bold;color:#000;padding:0 0 0 0 30px; line-height:25px;
+}
+ul.left_menu li.even a{
+width:150px;height:30px;display:block;background:url(../image/bullet2.gif) no-repeat left #eee6e6;background-position:7px 7px;border-bottom:1px #FFFFFF solid;
+text-align:center; font: "Times New Roman"; font-weight:bold;color:#000;padding:0 0 0 0 30px; line-height:25px;
+}
+ul.left_menu li.even a:hover, ul.left_menu li.odd a:hover{
+background:url(favs.gif) no-repeat left #7bbcc7; color:#F00;background-position:7px 7px;
+}
+
+
+/*----------------------------*/
+.giua{
+float :left;
+width:640px;
+height:1010px;
+background-color:#FFF;
+boder:1;
+/*padding : 5px;*/
+position:relative;
+}
+.khuyenmai{
+width:640px;
+height:40px;
+margin:5px inherit;
+background:#b6000a scroll 5px 5px ;
+text-align:center;
+font-size:16px;
+font-weight:bold;
+color:#FFF;
+line-height:40px;
+}
+
+
+
+/* Menu PHẢI---------*/
+.title_box_giua{
+width:150px;
+height:35px;
+margin:1px 0 0 ;
+background:#609aa5 url(menu_title_bg.gif)    no-repeat scroll 0px 5px ;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+line-height:30px;
+}
+
+/*-----MENU PHAI----------*/
+.phai{
+float :left;
+width:150px;
+height :1000px;
+background-color:#333;
+boder :1;
+padding :5px;
+}
+.title_box_phai{
+width:150px;
+height:40px;
+margin:1px 0 0;
+background:#609aa5 url(user_add.png) no-repeat scroll 9px 9px ;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+line-height:35px;
+}
+.login{
+	font-size:12px;
+	font-weight:normal;
+	line-height:20px;
+	color:#d4d4d4;
+	text-align:center;
+}
+.login a{
+	color:#d4d4d4;
+	text-decoration:none;
+	background: no-repeat;
+	padding:0 0 23px;
+	text-align:center;
+}
+.login a.passwords{background: no-repeat;}
+.login a:hover{
+	color:#ffe787;
+	text-decoration:underline;
+	text-align:center;
+}
+
+/* CÁC HÃNG MÁY TÍNH*/
+.title_box_sanpham{
+width:150px;
+height:40px;
+margin:1px 0 0;
+background:#609aa5 no-repeat scroll 9px 9px ;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+color:#fff;
+line-height:35px;
+}
+.border_box_sanpham {
+	background:#FFF;
+    border:#999 ;
+    height:300px;
+    text-align:center;
+    width: 150px;
+}
+.newsprod {
+	text-align:center;
+}
+
+/* khong cho du lieu di chuyen */
+.clear
+{ clear:both;
+}
+/*-------------  THANH FOOTER---------------- */
+.khungfooter{
+width:960px;
+left:150px;
+height:40px;
+background-color:#999;
+boder:1;
+position:absolute;
+top :1030px;
+}
+.footer
+{
+	width:960px;
+	height:100px;
+	text-align:center;
+	background-color:#CCC;
+	}
+.footertop
+{
+	height:auto;
+	text-align:left;
+	background-color:#333;
+}
+
+
+
+
+
+
+
+
+
+/* ket thuc footer */
+.bao
+{
+	height:auto;
+	width:960px;
+	}
+/*bat dau khung san pham*/
+.khung1
+{
+		margin: 0 10px 0 10px;
+		background-color:#d9d9d9;
+}
+/*bat dau khung san pham*/
+
+
+
+.sanpham
+{
+width :630px;
+height :auto;
+/*background-color:#00FF33;*/
+/*position:relative;*/
+}
+.ngang
+{
+width :640px;
+height:200px;
+background-color:#6600FF;
+}
+.o1{
+width :210px;
+height:280px;
+background:#ffffff;
+border:1 ;
+border-bottom-color:#00FF00;
+padding:px;
+float :left;
+text-align:center;
+/*position:relative;*/
+}
+h5{
+text-align:center;
+}
+.gia
+{
+    color: #DA251C;
+    font-size: 12px;
+    font-weight: bold;
+}
+.tieude{
+width:640px;
+height:40px;
+background-color:#3399CC;
+text-align:center;
+top:10px;}
+.bang /* nen coi khung o1*/
+{
+	width:200px;
+	position:absolute;
+	display:none;
+}
+/*div.sanpham div.ngang div.o1 :hover table,table:hover
+{display:block;}*/
+/* ket thuc khung san pham */
+#o1{
+width :210px;
+height:200px;
+background:#ffffff;
+border:1px #666666;
+border-bottom-color:#00FF00;
+padding:px;
+float :left;
+text-align:center;
+position:relative;/* thay doi cho nay de hien khung */
+}
+.o1 table
+{
+position:absolute;
+width:300px;
+display:none;
+border:1px solid green;
+ }
+ .quaylai
+{
+
+width:100px;
+height:25px;
+padding:px;
+float: right;
+text-align:center;
+ }
+
+
+table{background-color:  }
+/* chi tiet san pham */
+.khunghinh
+{
+width:200px;
+height:500px;
+float:left;
+padding:5px;
+border:1px;
+}
+.chitiet
+{
+width:400px;
+height:500px;
+float:left;
+border:1px;
+padding:5px;
+}
+.slogan
+{
+width:600px;
+text-align:center;
+height:40px;
+padding:20px;
+color:#F00;
+font-weight:700;
+font-size:30px;
+background-color: #FFF  ;
+
+}
+.o4{
+			/*280px;*/
+
+background:#ffffff; 
+border:1 ;
+ 
+   
+padding:px;
+float :left;
+text-align:center;
+/*position:relative;*/
+}
+.slogan1
+{
+width:480px;
+text-align:center;
+height:450px;
+padding: 80px;
+color:  #000;
+font-weight:700;
+font-size:14px;
+background-color:#FFF;
+
+}
+/* ket thuc chi tiet */
+/* ket thuc khung san pham */
+/* san pham cua admin */
+.hinhid
+{
+width:630px;
+height:300px;
+text-align:center;
+padding:5px;
+}
+.chitietid
+{
+width:auto;
+height:auto;
+background:url(../hinh/anhso.gif);
+}
+.chitiettrai
+{
+	width:200px;
+	height:500px;
+	float:left;}
+.chitietphai
+{
+	width:400px;
+	height:500px;
+	float:left;
+	
+}
+.rong
+{
+	height:50px;
+	}
+	
+/* ket thuc san pham cua admin */
+body{background-color:#b6d9ef;font:Georgia, "Times New Roman", Times, serif;}
+a{ text-decoration:none; }
+h2 {
+    color: #FFFFFF;
+    line-height: 25px;
+    text-align: center;
+}
+.center_content{
+/*	background:url(../hinh/tuyet.gif);*/
+	background-repeat:no-repeat;
+	width:585px;
+	float:left;
+	padding:5px 10px;
+}
+.hinh
+{
+background:url(../hinh/anhso.gif);
+width: auto ;
+height:1010px ;
+background-color:#FFF;
+}

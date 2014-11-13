@@ -1,0 +1,14 @@
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WcfServiceMobile\bin\WcfServiceMobile.dll
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WcfServiceMobile\bin\WcfServiceMobile.pdb
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.dll
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.pdb
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.csprojResolveAssemblyReference.cache
+D:\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.dll
+D:\Web service\WindowsFormsMobile\WcfServiceMobile\bin\WcfServiceMobile.dll
+D:\Web service\WindowsFormsMobile\WcfServiceMobile\bin\WcfServiceMobile.pdb
+D:\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.pdb
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WcfServiceMobile\bin\WcfServiceMobile.dll
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WcfServiceMobile\bin\WcfServiceMobile.pdb
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.dll
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.pdb
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WcfServiceMobile\obj\Debug\WcfServiceMobile.csprojResolveAssemblyReference.cache

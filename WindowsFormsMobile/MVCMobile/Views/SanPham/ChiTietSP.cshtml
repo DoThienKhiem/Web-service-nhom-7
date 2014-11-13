@@ -1,0 +1,64 @@
+﻿@model MVCMobile.ServiceReferenceSanPham.SanPham
+@{
+    ViewBag.Title = "ChiTietSP";
+}
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+ }
+<script>
+	  function dathang()
+	  {
+		alert ('Bạn phải đăng nhập với sử dụng được chức năng này');  
+	  }
+</script>
+<div class="giua">
+		<div class="image">
+	<div class="slogan" >
+	  <p><strong>@Html.DisplayFor(p => p.TenSP).ToString().Trim()</strong><strong>&nbsp;</strong><strong>&nbsp;</strong><strong> </strong></p>
+<h3>&nbsp;</h3>
+	</div>
+		<div class="khunghinh">
+		<div class = "o1"><img src="../Content/image/@Html.DisplayFor(p => p.HinhAnh).ToString().Trim()" width="168" height="186" />
+<h3>&nbsp;</h3>
+					  	<p><strong>@Html.DisplayFor(p =>p.TenSP).ToString().Trim()</strong><strong>&nbsp;</strong><strong>&nbsp;</strong></p>
+					  	<p><strong>Giá bán   </strong> <br/>
+					  	  <span class="gia"><strong>@Html.DisplayFor(p =>p.Gia).ToString().Trim()</strong>VNÐ </span> </p>
+                        <p>    @using (Html.BeginForm("AddToCart", "GioHang", new { masanpham = @Html.DisplayFor( p => p.MaSP).ToString().Trim() }))
+                                {
+                                          <input name="DatHang" type="submit" value="Đặt Hàng" onclick="return dathang();"/>
+                                }
+
+                        </p>
+        </div>
+		</div><!-- ket thuc khung hinh -->
+		<div class="chitiet">
+        <ul>
+            <li>
+                @Html.DisplayFor(p=>p.MoTa).ToString().Trim()
+            </li>
+        </ul>	
+            @*	<ul>
+        
+	        <li>Hệ điều hanh Android  2.3</li>
+            <li>Màn hình Super AMOLED  16 triệu màu 5.3 inches</li>
+            <li>Máy ảnh 8.0 MP&nbsp;tự  động lấy nét, đèn led flash</li>
+            <li>Quay phim chuẩn HD  1080p</li>
+            <li>Vi xử lý Dual-core  1.4GHz, Ram 1GB, bộ nhớ 16GB</li>
+            <li>Hỗ trợ mạng xã hội, la  bàn số, Adobe Flash 10.1</li>
+            <li>Bút S Pen cho phép  viết vẽ trên màn hình cảm ứng điện dung</li>
+            <li>Kết nối 3G, Wifi,  EDGE, GPRS, Bluetooth, A-GPS</li>
+          </ul>*@
+		<p>&nbsp;</p>
+		<p>&nbsp;</p> 
+		
+<!-- co the them phan chi tiet -->
+		<p>Giá Bán:<strong> <span class="gia1">@Html.DisplayFor(p =>p.Gia).ToString().Trim()  VNĐ</span>&nbsp;</strong>&nbsp;		</p>
+		<p class="gia">(Giá trên đã bao gồm VAT)</p>
+		
+	
+		</div><!-- ket thuc chi tiet -->
+	
+	</div><!-- ket thuc giua --><!-- ket thuc san pham -->
+	
+
+	</div>

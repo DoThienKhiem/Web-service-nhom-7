@@ -1,0 +1,22 @@
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.exe.config
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.exe
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.pdb
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.csprojResolveAssemblyReference.cache
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.Form1.resources
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.Properties.Resources.resources
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.csproj.GenerateResource.Cache
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.exe
+C:\Users\Khiem\Desktop\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.pdb
+D:\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.exe.config
+D:\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.exe
+D:\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.pdb
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.exe.config
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.exe
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.pdb
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.csprojResolveAssemblyReference.cache
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.Form1.resources
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.Properties.Resources.resources
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.csproj.GenerateResource.Cache
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.exe
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\bin\Debug\WindowsFormsMobile.pdb
+C:\Users\Khiem\Desktop\New folder (3)\Web service\Web service\WindowsFormsMobile\WindowsFormsMobile\obj\Debug\WindowsFormsMobile.FormCTPhieuNhap.resources

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MVCMobile.ServiceReferenceSanPham.SanPham>
+@{
+    ViewBag.Title = "SanPhamTheoLoai";
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+<div class="giua" style="z-index:0;"> 
+<div class="image">
+	  <!--div nay cho khung chinh giua -->
+	  <div class="slogan">
+	  			<h1 align="center">Sản Phẩm</h1>
+		</div><div class="h_30"></div>
+		
+<div class="sanpham"><!-- bat dau san pham -->	</div>
+<div class="ngang"> <!-- bat dau khung thu nhat -->
+														
+                      @foreach (var p in Model)
+                        {
+					        <div class="o2">
+                            <a href="../SanPham/ChiTietSP?MaSP=@Html.DisplayFor(item =>  p.MaSP).ToString().Trim()">
+					                 <img src="../Content/image/@Html.DisplayFor(item => p.HinhAnh).ToString().Trim()" height="170" width="200"  />
+                            </a>
+					        <a href="../SanPham/ChiTietSP?MaSP=@Html.DisplayFor(item =>  p.MaSP).ToString().Trim()">					  
+					                    <h5>&nbsp;</h5>
+				                       <h5>@Html.DisplayFor(item => p.TenSP).ToString().Trim() </h5>
+				  	        </a><strong>Giá bán</strong>
+					        <span class="gia">@Html.DisplayFor(item => p.Gia) VNĐ</span>
+                     @if (Request.IsAuthenticated )
+                    {
+                                     <div id='mIntro'><div id='mFunc'><div id='price2'>
+                                          <p class="button">
+                                     @Html.ActionLink("Đặt Hàng", "AddToCart", 
+                                        "GioHang", new { id = (Html.DisplayFor(item => p.MaSP).ToString().Trim()) }, "")
+                                             </p>
+                                              </div>
+                                              </div>
+                                     </div>
+                }else{
+                                     <div id='mIntro'><div id='mFunc'><div id='price2'>
+                                      <a href="" onclick="alert('Bạn phải đăng nhập để mua hàng!');"> <input type="button" name="dathang" id="dathang" value="Đặt Hàng"  /> </a> </div></div>
+                                 </div>
+                }
+
+                        </div>
+                      }
+				<div class="clear"></div>
+    <p>
+    <div>@{Html.RenderAction("PhanTrang", "PhanTrang", new { currentpage = "SanPham/Index?", totalpages = ViewBag.TotalPages });} </div>
+        <div style="text-align:right; padding:6px; color:#FF3333; font-size:14px; height:22px"><a href="#top">>>Về đầu trang</a></div>
+</p>
+
+</div>
+</div>				
+                    <!-- ket thuc hang ngang thu 2 -->
+

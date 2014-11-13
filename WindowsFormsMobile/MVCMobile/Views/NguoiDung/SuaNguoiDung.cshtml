@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "SuaNguoiDung";
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+@model MVCMobile.ServiceReferenceUser.NguoiDung
+<script>
+ function check_Number(e) {
+    var unicode = e.keyCode;
+    if (unicode != 8) 
+	{
+        if (unicode < 48 || unicode > 57) 
+		{
+            return false;
+        }
+    }
+}	
+	
+</script>
+<div class="giua" style="z-index:0;"> 			
+		<div class="hinh">
+			     <div class="center_content">
+   	<!--<img src= align="middle" width=100% />-->
+    <!--<div align="center">-->
+
+<table align="center" width="100%" border="0">
+<div class="h_30"></div>
+<tr>
+<th align="center" width="100%" style="color:red" ><h1 >CHỈNH SỬA  NGƯỜI DÙNG</h1></th>
+</tr>
+</table>
+                     
+<table align="center" style="font-size:14px">
+	@using(Html.BeginForm("Edit","NguoiDung", FormMethod.Post,new{id = "mainForm", name = "mainForm", onSubmit = "" }))
+ {
+    <tr>   
+         <td align="right">Tên Đăng Nhập:</td>
+     
+        <td>  <input   name="User" type="text" class="textbox_left" readonly="readonly" value="@Model.IDUser"></td>
+     </tr>
+   
+    <tr>
+    
+        <td  align="right">Mật Khẩu:</td>
+        <td><input name="Pass" type="password" value="@Model.Pass" />
+    </tr>
+    
+  
+	<tr>
+	    <td align="right">Họ Tên: </td>
+	    <td><input name="Fullname" type="text" value="@Model.HoTen"  /></td>
+	</tr>
+   
+    
+    <tr>
+              <td align="right"> Số Điện Thoại:</td>
+               <td><input name="SoDienThoai" type="text" maxlength="11" onkeydown="return check_Number(event)" value="@Model.SDT" /></td>
+    </tr>
+    <tr>
+		      <td align="right">Địa Chỉ:</td>
+		      <td><input name="DiaChi" type="text" value="@Model.DiaChi" /></td>
+    </tr>
+	<tr>
+		      <td align="right">Ngày Sinh :</td>
+		      <td><input name="NgaySinh" type="text" value="@Model.NgaySinh" /></td>
+    </tr>
+
+    
+    <tr>
+        <td align="right"> Email:</td>
+        <td><input name="Email" type="text" value="@Model.Email" /> 
+    </tr>
+
+    <tr>
+        <td align="right">
+        <input name="save" type="submit" value="Cập Nhật"  />
+        </td>
+        <td><a href="../SanPham/Index">
+                <input name="Huy" type="button" value="Hủy" />
+        </a></td>
+    </tr>
+    
+ }
+</table>
+
+</div>
+		</div>
+	</div>

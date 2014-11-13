@@ -1,0 +1,52 @@
+﻿@model IEnumerable <MVCMobile.ServiceReferenceSanPham.SanPham>
+
+@{
+   
+    Layout = "~/Views/Shared/Index.cshtml";
+}
+
+
+<div class="giua" style="z-index:0;"> 
+<div class="image">	
+	  <!--div nay cho khung chinh giua -->
+	  <div class="slogan">
+	  			<h1 align="center">Kết quả tìm kiếm</h1>
+		</div><div class="h_30"></div>
+
+    @if (Model.Count() < 1)
+    {
+        <div id='pContent'>
+            Kết quả tìm kiếm với từ khóa: <p><b>@Html.Raw(ViewBag.Tensp)</b></p><br /><br />
+            <b>@Html.Raw(ViewBag.KhongTimThay)</b>        
+        </div>               
+    }
+    else
+    {		
+        <div class="sanpham"><!-- bat dau san pham -->	
+        <div class="ngang"> <!-- bat dau khung thu nhat -->
+														
+
+					
+                        @foreach (var p in Model)
+                         {
+                            <div class="o2">
+					        <img src="../Content/image/@Html.DisplayFor(item => p.HinhAnh).ToString().Trim()" width="200" height="170" />
+					        <a href="../SanPham/ChiTietSP?Masp=@Html.DisplayFor(item =>p.MaSP).ToString().Trim()">
+					        <h5>&nbsp;</h5>
+					        <h5>@Html.DisplayFor(item => p.TenSP).ToString().Trim()  </h5>
+			  		          </a><strong>Giá bán   </strong> 
+					        <span class="gia">@Html.DisplayFor(item => p.Gia).ToString().Trim() </span>					
+                        	</div>																								
+                        }
+                    
+        </div>	 <!-- ket thuc 01 san pham 3 -->
+                            <p>
+                    <div>@{Html.RenderAction("PhanTrang", "PhanTrang", new { currentpage = "SanPham/Index?", totalpages = ViewBag.TotalPages });} </div>
+                        <div style="text-align:right; padding:6px; color:#FF3333; font-size:14px; height:22px"><a href="#top">>>Về đầu trang</a></div>
+                </p>
+        </div><!-- ket thuc hang ngang dau tien -->
+		@*<div class="clear"></div>*@
+        
+        }				
+	</div>
+    </div>				

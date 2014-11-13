@@ -1,0 +1,43 @@
+﻿<div class="title_box_sanpham">Giỏ Hàng </div>
+<div class="border_box">
+           
+             	   
+             
+               <div class="cb"></div>
+               <div class="cb h_5"></div>
+    @if (Request.IsAuthenticated )
+ {
+     <table border="0" class="border_box" style="width: 150px; height: auto">
+  
+    <tr>
+      <td colspan="2" class="style1" style=" color:#ff0202">
+        Giỏ hàng: @Session[WebBanDT.Models.MySession.TongSL] sản phẩm
+          (@Html.ActionLink("Xem Giỏ Hàng","Index","GioHang"))
+      </td>
+        </tr>
+         <tr>
+
+         <td colspan="2"  style="color:#ff0202">
+         <a style="color:#ff0202" href="../GioHang/LichSuGioHang">Chi tiết đơn hàng </a>    
+         </td>
+    </tr>
+   
+  </table>
+ }
+    else
+    {
+     <table border="0" class="border_box" style="width: 150px; height: auto">
+   
+    <tr>
+      <td colspan="2" class="border_box" style="color:#ff0202">
+       Bạn cần đăng nhập để sử dụng chức năng giỏ hàng
+      </td>
+    </tr>
+   
+  </table>
+    }
+                
+                   
+             
+            
+      </div>     <!-- ket thuc  thúc form tim kiếm -->

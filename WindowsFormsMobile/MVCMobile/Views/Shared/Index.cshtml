@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>điện thoại</title>
+<link href="../Content/css/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+a {
+	font-family:  Times New Roman, Times, serif;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color:red;
+}
+a:active {
+	text-decoration: none;
+}
+body,td,th {
+	color: #000;
+	font-weight: bold;
+}
+body {
+	background-color: #000000;
+}
+-->
+</style></head>
+<body>
+<div id="wrapper">
+<!-- chen hinh hay flash vao dau grang web
+    <img src="image/dienthoai.png" alt="logo" height="223"  width="960"/>  -->
+	<div id="logo"> 
+      <param name="movie" value="image/DIENTHOAI.swf" />
+      <param name="quality" value="high" />
+      <embed src="../Content/image/DIENTHOAI.swf" quality="high"  width="960" height="200"></embed>
+	  
+</div>
+	
+  <!-- ket thuc logo  -->
+   <div id="m-top"><div id="container">
+<ul>
+	<li>
+		<span id="left-m">&nbsp;</span>
+		<span id="mid-m"><a href="../SanPham/Index">Trang Chủ</a></span>
+		<span id="right-m">&nbsp;</span>
+	</li>
+    <li>
+		<span id="left-m">&nbsp;</span>
+		<span id="mid-m"><a href="../Menu/GioiThieu">Giới Thiệu</a></span>
+		<span id="right-m">&nbsp;</span>
+	</li>
+	<li>
+		<span id="left-m">&nbsp;</span>
+		<span id="mid-m"><a href="../SanPham/Index" >Sản Phẩm</a></span>
+		<span id="right-m">&nbsp;</span>
+	</li>
+	<li>
+		<span id="left-m">&nbsp;</span>
+		<span id="mid-m"><a href="../Menu/LinhKien" >Linh Kiện</a></span>
+		<span id="right-m">&nbsp;</span>
+	</li>
+	<li>
+		<span id="left-m">&nbsp;</span>
+		<span id="mid-m"><a href="../Menu/KhuyenMai">Khuyến Mãi</a></span>
+		<span id="right-m">&nbsp;</span>
+	</li>
+	<li>
+		<span id="left-m">&nbsp;</span>
+		<span id="mid-m"><a href="../Menu/LienHe">Liên Hệ</a></span>
+		<span id="right-m">&nbsp;</span>
+	</li>
+
+</ul>
+</div></div>
+<!-- ke thuc menu-->
+<div class="bao">   
+  <div class="trai">
+      <div>
+    	@{Html.RenderPartial("~/Views/SanPham/TimKiem.cshtml");}
+      </div><!-- Ket thuc border_box -->   
+           <div class="title_box_menu">MENU SẢN PHẨM </div> 
+            <ul class="left_menu">
+            @{Html.RenderAction("DanhMucSP", "SanPham");}	
+                        
+			</ul>   
+            <!-- doan na@*y den ho tro --> 
+             <div class=*@"h_6"></div>
+            <a href="%20http://support.vdconline.vn/"><img src="../Content/image/sp.jpg" height="138" width="150"></a>
+   			 <!--HỖ TRỢ TRỨC TUYẾN-->
+             
+             <div class=" title_box_menu">HỖ TRỢ TRỰC TUYẾN </div>
+             <div class="border_hotrotructuyen">
+                  	 <div class="cb h_5"></div>   
+     	 			 <p>Kinh doanh Online </p>
+                     <div class="cb h_5"></div> 
+                     <a href=""><img src="../Content/image/online.gif" alt=" Kinh Doanh Online"></a>
+                     <div class="cb h_5"></div>
+                     <div class="cb h_5"></div>
+                     <p>Tư vấn kĩ thuật </p>
+                     <a href=""><img src="../Content/image/onli.gif" alt=" Tư vấn kĩ thuật"></a>
+                
+      </div><!-- ket thuc ho tro --> 
+          
+    				<a href="http://dddn.com.vn/"><img src="../Content/image/doanh-nghiep-new.gif" height="120" width="150"></a>
+                    <a href="http://www.w3schools.com/"><img src="../Content/image/LOGO.jpg" height="130" width="150"></a>
+ 
+    	
+    </div> 
+    <!-- ket thuc khung ben trai-->
+    @RenderBody()
+
+    <div class="phai"><!-- bat dau day la doan ben phai-->
+    	
+        <div> @{Html.RenderPartial("~/Views/NguoiDung/DangNhap.cshtml");}
+
+              </div> <!-- ket thuc  boder bõx -->
+              <!--ĐOẠN DÒNG SẢN PHẨM--> 
+       		 <div class="title_box_sanpham">CÁC HÃNG </div> 
+     		 <div class="border_box_sanpham">  
+             		  <marquee direction="up" behavior="scroll" onmouseout="this.start();" onmouseover="this.stop();" scrollamount="1.5" scrolldelay="1" height="180">
+                     			 <div class="newsprod">
+                                 	  <!-- HÃNG NOKIA-->
+                    <a href="NOKIA.html" alt="NOKIA"> <img title="NOKIA" alt="NOKIA" src="../Content/image/NOKIA.png" border="0" height="60" width="120"></a>
+                                         <br><hr style="width:160px;"><br>
+                                      <!-- HÃNG SAMSUNG-->
+                  <a href="SAMSUNG.html" alt="SAMSUNG"><img title="SAMSUNG" alt="SAMSUNG" src="../Content/image/SAMSUNG.jpg" border="0" height="80" width="120"></a>
+           									  <br><hr style="width:160px;"> <br>  
+                                       <!--HÃNG LG-->    
+           		  <a href="LG.html" alt="LG"><img title="LG" alt="LG" src="../Content/image/LG.jpg" border="0" height="100" width="100"></a>
+      									       <br><hr style="width:160px;"> <br>
+      								 <!--HÃNG QMOBILE-->
+           		  <a href="QMOBILE.html" alt="QMOBILE"><img title="QMOBILE" alt="QMOBILE" src="../Content/image/QMOBILE.jpg" border="0" height="80" width="80"></a>
+           										  <br><hr style="width:160px;"><br>
+      									 <!--HÃNG MOTOROLA-->
+            	<a href="MOTOROLA.HTML" alt="MOTOROLA"><img title="MOTOROLA" alt="MOTOROLA" src="../Content/image/MOTOROLA.jpg" border="0" height="100" width="100"></a>
+           							  <br><hr style="width:160px;"><br>
+   								    <!--HÃNG SONY-->
+           		  <a href="SONY.HTML" alt="SONY"><img title="SONY" alt="SONY" src="../Content/image/SONY.jpg" border="0" height="80" width="100"></a>
+            							 <br><hr style="width:160px;"><br>
+                                    
+                               </div><!-- ket thuc newseod --></marquee><!-- ket thuc marquee -->         
+                        <div class="cb h_6"></div>
+                     
+                      		  <a href="http://www.google.com.vn/"><img src="../Content/image/cuahang.gif" height="150" width="150"></a>
+						
+					<div class="title_box_sanpham">NHÀ MẠNG</div>
+					
+                     <a href="http://www.google.com.vn/"> <img src="../Content/image/viettel.jpg" height="150" width="150"></a>					
+					<a href="http://www.alexa.com/"> <img src="../Content/image/vnpt.jpg"  height="150" width="150"> </a>
+                    <a href="http://phanmem.com/">  <img src="../Content/image/Spencial_Offer.gif" height="82" width="150"></a>
+                        
+        </div><!-- ket thuc box san pham --> 
+    </div><!-- ket thuc noi dung ben phai-->
+  </div><!-- ket thuc bao -->
+    <div class="clear"><!-- div nay ngan khong cho du lieu chay len --></div>
+    <div class="footer"><!-- bat dau footer-->
+    	<div class=".footertop">
+        	<a href="../SanPham/Index"> Trang Chủ </a> | <a href="../Menu/GioiThieu">Giới Thiệu </a> |<a href="../Menu/KhuyenMai">Khuyến Mãi</a> | <a href="../Menu/LienHe">Liên Hệ </a>
+        </div>
+    	<!-- ket thuc footer top --> 
+        CÔNG TY TNHH CESC<br/>
+        
+		Trụ sở chính : 273 AN DƯƠNG VƯƠNG - F3 - Q5 - HCM<br/>
+		
+   
+    </div><!-- ket thuc footer-->
+	
+    
+</div><!--ket thuc wraper -->
+
+
+
+</body>
+</html>

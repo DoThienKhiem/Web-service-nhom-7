@@ -1,0 +1,320 @@
+﻿
+<script src="~/Scripts/JavaScript1.js"></script>
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+    }
+
+
+<div class="giua" style="z-index:0;"> 			
+		<div class="hinh">
+			     <div class="center_content">
+   	<!--<img src= align="middle" width=100% />-->
+    <!--<div align="center">-->
+
+<table align="center" width="100%" border="0">
+<div class="h_30"></div>
+<tr>
+<th align="center" width="100%" style="color:red" ><h1 >ĐĂNG KÝ NGƯỜI DÙNG</h1></th>
+</tr>
+</table>
+
+<table align="center" style="font-size:14px">
+	@using(Html.BeginForm("DangKyUser","NguoiDung", FormMethod.Post,new{id = "mainForm", name = "mainForm", onSubmit = "" }))
+ {
+    <tr>
+     
+    <td align="right">Tên Đăng Nhập:</td>
+     @if (ViewBag.ThongTinUsr != null)
+     {
+    <td>  <input onchange="Checkname();"  name="User" type="text" class="textbox_left" value="@ViewBag.ThongTinUsr.IDUser">
+          <p><span id="sao" style="color:#FF0000"></span></p> 
+           <span id="sao3" style="color:#FF0000">@Html.Raw(ViewBag.Mess)</span>
+    </td>
+        
+      }else{
+       <td> <input onchange="Checkname();"  name="User" type="text" class="textbox_left" value="">
+             <p><span id="sao" style="color:#FF0000"></span></p> 
+       </td>
+     }  
+         
+     </tr>
+   
+    <tr>
+    
+    <td  align="right">Mật Khẩu:</td>
+    <td><input name="Pass" type="password" value="" />
+        <p><span id="mk" style="color:#FF0000"></span> </p> 
+    </td>
+    </tr>
+    
+    <tr>
+    <td align="right">Nhập Lại Mật Khẩu:</td>
+    <td><input name="Pass2" type="password" value="" onchange="checkpass();" />
+        <p><span id="mk2" style="color:#FF0000"></span>       </p> 
+    </td>
+    </tr>
+    
+	<tr>
+   
+	<td align="right">Họ Tên: </td>
+     @if (ViewBag.ThongTinUsr != null)
+     {
+	<td><input name="Fullname" type="text" value="@ViewBag.ThongTinUser.HoTen"  />
+         <p><span id="fullname" style="color:#FF0000"></span></p>
+	</td>
+     }
+     else
+     {
+      <td><input name="Fullname" type="text" value=""  />
+           <p><span id="fullname" style="color:#FF0000"></span></p>
+      </td>   
+     }
+	</tr>
+   
+    
+    <tr>
+    
+              <td align="right"> Số Điện Thoại:</td>
+        @if (ViewBag.ThongTinUser != null)
+    { 
+               <td><input name="SoDienThoai" type="text" maxlength="11" onkeydown="return check_Number(event)" value="@ViewBag.ThongTinUser.SDT" />
+                   <p><span id="dienthoai" style="color:#FF0000"></span></p> 
+               </td>
+        }
+        else
+        {
+            <td><input name="SoDienThoai" type="text" maxlength="11" onkeydown="return check_Number(event)" value="" />
+                <p><span id="dienthoai" style="color:#FF0000"></span></p> 
+            </td>
+        }
+    </tr>
+    <tr>
+		      <td align="right">Địa Chỉ:</td>
+           @if (ViewBag.ThongTinUser != null)
+    { 
+		      <td><input name="DiaChi" type="text" value="@ViewBag.ThongTinUser.DiaChi" />
+                  <p><span id="diachi" style="color:#FF0000"></span></p> 
+		      </td>
+           }else{
+                <td><input name="DiaChi" type="text" value="" />
+                    <p><span id="diachi" style="color:#FF0000"></span></p> 
+                </td>
+           }
+
+    </tr>
+	<tr>
+		      <td align="right">Ngày Sinh :</td>
+        @if (ViewBag.ThongtinUser != null)
+        { 
+		      <td><input name="NgaySinh" type="text" value="@ViewBag.ThongTinUser.NgaySinh" onchange=" return xuly();" />
+                  <span id="nhacnho" style="color:#FF0000">(dd/mm/yyyy)</span>
+                    <p><span id="ngaysinh" style="color:#FF0000"></span></p> 
+		      </td>
+        }
+        else
+        {
+             <td><input name="NgaySinh" type="text" value="" onchange="return xuly();" />
+                  <span id="nhacnho" style="color:#FF0000">(dd/mm/yyyy)</span>
+                    <p><span id="ngaysinh" style="color:#FF0000"></span></p> 
+		      </td>
+        }
+    </tr>
+   
+    
+    <tr>
+        <td align="right"> Email:</td>
+         @if (ViewBag.ThongtinUser != null)
+        { 
+        <td><input name="Email" type="text" value="@ViewBag.ThongTinUsr.Email" onchange="checkEmail();" />
+            <p><span id="thu" style="color:#FF0000"></span></p> 
+           <p><span id="thu1" style="color:#FF0000"></span></p> 
+        </td>
+         }
+        else
+        {
+              <td><input name="Email" type="text" value="" onchange="checkEmail();" />
+                  <p><span id="thu" style="color:#FF0000"></span></p> 
+                    <p><span id="thu1" style="color:#FF0000"></span></p> 
+        </td>
+             
+         }     
+    </tr>
+    <tr>
+        <td align="right">
+        <input name="DangKy" type="submit" value="Đăng Ký"  onclick="return check1();"/>
+        </td>
+        <td><a href="../SanPham/Index">
+                <input name="Huy" type="button" value="Hủy" />
+        </a></td>
+    </tr>
+  
+
+
+
+
+ }
+</table>
+
+</div>
+		</div>
+	</div>
+
+<script src="~/Scripts/JavaScript1.js"></script>
+@{
+    Layout = "~/Views/Shared/Index.cshtml";
+    }
+
+
+<div class="giua" style="z-index:0;"> 			
+		<div class="hinh">
+			     <div class="center_content">
+   	<!--<img src= align="middle" width=100% />-->
+    <!--<div align="center">-->
+
+<table align="center" width="100%" border="0">
+<div class="h_30"></div>
+<tr>
+<th align="center" width="100%" style="color:red" ><h1 >ĐĂNG KÝ NGƯỜI DÙNG</h1></th>
+</tr>
+</table>
+
+<table align="center" style="font-size:14px">
+	@using(Html.BeginForm("DangKyUser","NguoiDung", FormMethod.Post,new{id = "mainForm", name = "mainForm", onSubmit = "" }))
+ {
+    <tr>
+     
+    <td align="right">Tên Đăng Nhập:</td>
+     @if (ViewBag.ThongTinUsr != null)
+     {
+    <td>  <input onchange="Checkname();"  name="User" type="text" class="textbox_left" value="@ViewBag.ThongTinUsr.IDUser">
+          <p><span id="sao" style="color:#FF0000"></span></p> 
+           <span id="sao3" style="color:#FF0000">@Html.Raw(ViewBag.Mess)</span>
+    </td>
+        
+      }else{
+       <td> <input onchange="Checkname();"  name="User" type="text" class="textbox_left" value="">
+             <p><span id="sao" style="color:#FF0000"></span></p> 
+       </td>
+     }  
+         
+     </tr>
+   
+    <tr>
+    
+    <td  align="right">Mật Khẩu:</td>
+    <td><input name="Pass" type="password" value="" />
+        <p><span id="mk" style="color:#FF0000"></span> </p> 
+    </td>
+    </tr>
+    
+    <tr>
+    <td align="right">Nhập Lại Mật Khẩu:</td>
+    <td><input name="Pass2" type="password" value="" onchange="checkpass();" />
+        <p><span id="mk2" style="color:#FF0000"></span>       </p> 
+    </td>
+    </tr>
+    
+	<tr>
+   
+	<td align="right">Họ Tên: </td>
+     @if (ViewBag.ThongTinUsr != null)
+     {
+	<td><input name="Fullname" type="text" value="@ViewBag.ThongTinUser.HoTen"  />
+         <p><span id="fullname" style="color:#FF0000"></span></p>
+	</td>
+     }
+     else
+     {
+      <td><input name="Fullname" type="text" value=""  />
+           <p><span id="fullname" style="color:#FF0000"></span></p>
+      </td>   
+     }
+	</tr>
+   
+    
+    <tr>
+    
+              <td align="right"> Số Điện Thoại:</td>
+        @if (ViewBag.ThongTinUser != null)
+    { 
+               <td><input name="SoDienThoai" type="text" maxlength="11" onkeydown="return check_Number(event)" value="@ViewBag.ThongTinUser.SDT" />
+                   <p><span id="dienthoai" style="color:#FF0000"></span></p> 
+               </td>
+        }
+        else
+        {
+            <td><input name="SoDienThoai" type="text" maxlength="11" onkeydown="return check_Number(event)" value="" />
+                <p><span id="dienthoai" style="color:#FF0000"></span></p> 
+            </td>
+        }
+    </tr>
+    <tr>
+		      <td align="right">Địa Chỉ:</td>
+           @if (ViewBag.ThongTinUser != null)
+    { 
+		      <td><input name="DiaCHi" type="text" value="@ViewBag.ThongTinUser.DiaChi" />
+                  <p><span id="diachi" style="color:#FF0000"></span></p> 
+		      </td>
+           }else{
+                <td><input name="DiaCHi" type="text" value="" />
+                    <p><span id="diachi" style="color:#FF0000"></span></p> 
+                </td>
+           }
+
+    </tr>
+	<tr>
+		      <td align="right">Ngày Sinh :</td>
+        @if (ViewBag.ThongtinUser != null)
+        { 
+		      <td><input name="NgaySinh" type="text" value="@ViewBag.ThongTinUser.NgaySinh" onchange=" return xuly();" />
+                  <span id="nhacnho" style="color:#FF0000">(dd/mm/yyyy)</span>
+                    <p><span id="ngaysinh" style="color:#FF0000"></span></p> 
+		      </td>
+        }
+        else
+        {
+             <td><input name="NgaySinh" type="text" value="" onchange="return xuly();" />
+                  <span id="nhacnho" style="color:#FF0000">(dd/mm/yyyy)</span>
+                    <p><span id="ngaysinh" style="color:#FF0000"></span></p> 
+		      </td>
+        }
+    </tr>
+   
+    
+    <tr>
+        <td align="right"> Email:</td>
+         @if (ViewBag.ThongtinUser != null)
+        { 
+        <td><input name="Email" type="text" value="@ViewBag.ThongTinUsr.Email" onchange="checkEmail();" />
+            <p><span id="thu" style="color:#FF0000"></span></p> 
+           <p><span id="thu1" style="color:#FF0000"></span></p> 
+        </td>
+         }
+        else
+        {
+              <td><input name="Email" type="text" value="" onchange="checkEmail();" />
+                  <p><span id="thu" style="color:#FF0000"></span></p> 
+                    <p><span id="thu1" style="color:#FF0000"></span></p> 
+        </td>
+             
+         }     
+    </tr>
+    <tr>
+        <td align="right">
+        <input name="DangKy" type="submit" value="Đăng Ký"  onclick="return check1();"/>
+        </td>
+        <td><a href="../SanPham/Index">
+                <input name="Huy" type="button" value="Hủy" />
+        </a></td>
+    </tr>
+  
+
+
+
+
+ }
+</table>
+
+</div>
+		</div>
+	</div>

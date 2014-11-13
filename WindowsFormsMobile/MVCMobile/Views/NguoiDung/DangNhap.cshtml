@@ -1,0 +1,84 @@
+﻿
+
+
+
+@if (Request.IsAuthenticated)
+{  
+    <div class="title_box_phai">Đăng Nhập</div>
+   
+
+    <div id='mnLeftContent'>
+        <div align="left">
+  <table border="0" class="border_box" style=" height: auto">
+
+      <tr>
+          <td colspan="2" class="border_box">
+              <p>&nbsp;</p>
+              <p style="color:#ff0202">Bạn đã đăng nhập với tên:</p>
+              <p style="color:#ff0202"><strong>@Html.Encode(User.Identity.Name)</strong></p>
+              <p style="color:#ff0202"><a href="../NguoiDung/SuaNguoiDung">Chỉnh  sửa người dùng</a></p>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="2" class="style1">
+              <script>
+                  function ktthoat() {
+                      if (confirm('Bạn có chắc là muốn thoát'))
+                          return true;
+                      else
+                          return false;
+                  }
+              </script>
+              @using (Html.BeginForm("LogOff", "NguoiDung", new { onSubmit = "ktthoat();" }))
+              {<input type="submit" name="thoat" id="thoat" value="Thoát" />}
+              <p>&nbsp;</p>
+          </td>
+          
+      </tr>
+  </table>
+         
+
+        </div>
+    </div>
+     
+}
+else
+{
+    <div class="title_box_phai">Đăng Nhập</div>
+    <div align="mid">
+  <table border="0" class="border_box" style="width: 150px; height: auto">
+      @using (Html.BeginForm("Login", "NguoiDung", FormMethod.Post, new { id = "Formdn", name = "Formdn", onSubmit = "" }))
+      {
+          <tr>
+              <td width="34" style="color:#ff0202">User:</td>
+              <td width="107" style="width: 75px">
+
+                  <input type="text" name="user" id="user" style="width: 100px" /></td>
+          </tr>
+          <tr>
+              <td style="color:#ff0202">Pass:</td>
+              <td style="width: 75px">
+                  <input type="password" name="pass" id="pass" style="width: 100px" /></td>
+          </tr>
+          <tr>
+              <td colspan="2" class="style1">
+                  <span class="style11"></span>
+                  <input type="submit" name="dangnhap" id="dangnhap" value="Đăng Nhập" />
+              </td>
+          </tr>
+      }
+      <tr>
+
+          <td colspan="2" class="style1"><a href="../NguoiDung/DangKy">
+              <input type="button" name="dangnhap2" id="dangnhap2" value="Đăng Ký" /></a></td>
+
+      </tr>
+  </table>
+</div>
+
+
+  
+}
+
+@Html.Raw(ViewBag.Error)
+
